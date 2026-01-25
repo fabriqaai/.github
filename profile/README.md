@@ -53,38 +53,18 @@ Most AI-assisted development suffers from three critical gaps:
 
 <br/>
 
-**A framework for spec-driven AI development with pluggable flows.** Implements the **AI-Driven Development Lifecycle (AI-DLC)** methodology where AI drives the conversation and humans validate.
-
-<br/>
-
-### The AI-DLC Methodology
-
-```
-┌─────────────┐    ┌──────────────┐    ┌─────────────┐
-│  INCEPTION  │───▶│ CONSTRUCTION │───▶│ OPERATIONS  │
-│             │    │              │    │             │
-│ Requirements│    │    Design    │    │ Deployment  │
-│   Planning  │    │    Coding    │    │ Monitoring  │
-└─────────────┘    └──────────────┘    └─────────────┘
-```
-
-<br/>
-
-### Four Specialized Agents
-
-| Agent | Role |
-|-------|------|
-| **Master** | Orchestrates workflows, navigation, and phase transitions |
-| **Inception** | Captures intent, elaborates requirements, decomposes work into units |
-| **Construction** | Executes implementation through validated stages (design, code, test) |
-| **Operations** | Handles deployment, verification, monitoring, and feedback loops |
+**A multi-agent orchestration system for AI-native software development.** Delivers multiple SDLC flows as markdown-based agent systems - from **Simple** (quick tasks) to **Fire** (rapid features) to full **AI-DLC** (enterprise workflows). AI drives the conversation, humans validate.
 
 <br/>
 
 ### Why specs.md?
 
+- **Multi-Agent Orchestration** - Specialized agents working in concert for each flow
+- **Pluggable SDLC Flows** - Choose your workflow:
+  - **Simple** - Spec generation for prototypes, MVPs, and team handoffs
+  - **FIRE** - Rapid feature development with adaptive checkpoints for brownfield/monorepo projects
+  - **AI-DLC** - Complete lifecycle with DDD/TDD/BDD for complex domains and regulated environments
 - **Rapid Iterations** - Development cycles measured in hours, not weeks ("Bolts")
-- **Built-in Best Practices** - Domain-Driven Design, Test-Driven Development, Behavior-Driven Development
 - **Human-in-the-Loop** - Validation at every stage ensures quality
 - **Universal Compatibility** - Works with 10+ AI tools
 
@@ -111,9 +91,10 @@ npx specsmd@latest install
 
 <div align="center">
 
-[**Repository**](https://github.com/fabriqaai/specs.md) | [**Website**](https://specs.md) | [**Documentation**](https://specs.md/docs) | [**Discord**](https://discord.specs.md/)
+[**Repository**](https://github.com/fabriqaai/specs.md) | [**Website**](https://specs.md) | [**Documentation**](https://specs.md/docs) | [**Video Tutorials**](https://specs.md/learn) | [**Discord**](https://discord.specs.md/)
 
 [![Discord](https://img.shields.io/badge/Join_Discord-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.specs.md/)
+[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=flat-square&logo=youtube&logoColor=white)](https://www.youtube.com/@specs-md)
 [![X/Twitter](https://img.shields.io/badge/@specsmd-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/specsmd)
 [![Product Hunt](https://img.shields.io/badge/Product_Hunt-DA552F?style=flat-square&logo=producthunt&logoColor=white)](https://www.producthunt.com/products/specs-md)
 
@@ -168,26 +149,12 @@ Traditional software development methodologies were designed when humans wrote e
 
 <br/>
 
-### AI-DLC: Built for the Agentic Era
-
-The **AI-Driven Development Lifecycle** isn't Agile with AI bolted on. It's a ground-up reimagining:
-
-| Dimension | Agile | AI-DLC |
-|:----------|:------|:-------|
-| **Iteration** | Weeks-long sprints | Hours/days "Bolts" |
-| **Leadership** | Humans drive everything | AI leads, humans validate |
-| **Design** | Optional practices | DDD/TDD/BDD mandatory |
-| **Context** | Lost between sprints | Persistent Memory Bank |
-| **Decomposition** | Manual breakdown | AI-powered analysis |
-
-<br/>
-
 <div align="center">
 
 **Learn More**
 
 [![SDLC Reimagined](https://img.shields.io/badge/SDLC_Reimagined-6366F1?style=flat-square)](https://specs.md/methodology/sdlc-reimagined)
-[![AI-DLC vs Agile](https://img.shields.io/badge/AI--DLC_vs_Agile-6366F1?style=flat-square)](https://specs.md/methodology/ai-dlc-vs-agile)
+[![Choose Your Flow](https://img.shields.io/badge/Choose_Your_Flow-6366F1?style=flat-square)](https://specs.md/architecture/choose-flow)
 [![Research Paper](https://img.shields.io/badge/Research_Paper_(PDF)-B31B1B?style=flat-square&logo=arxiv&logoColor=white)](https://github.com/fabriqaai/specs.md/blob/main/resources/aidlc.pdf)
 
 </div>
@@ -200,7 +167,7 @@ The **AI-Driven Development Lifecycle** isn't Agile with AI bolted on. It's a gr
 
 ## Developer Tools
 
-Open-source utilities built with Go for the AI-native developer workflow.
+Open-source utilities for the AI-native developer workflow.
 
 <br/>
 
@@ -208,49 +175,68 @@ Open-source utilities built with Go for the AI-native developer workflow.
 <tr>
 <td width="50%" valign="top">
 
-### claude-code-logs
+### specsmd
 
-**Browse and search your Claude Code conversations**
+**Multi-agent orchestration CLI**
 
-Ever had that moment where you solved something brilliantly with Claude last week but can't find that conversation? This tool transforms hard-to-read JSONL chat logs into a beautiful, searchable web interface.
-
-- Full-text search across all conversations
-- Syntax-highlighted code blocks
-- Collapsible project/session tree
-- Mobile-responsive design
-- Works completely offline
+Install and run specs.md flows directly from the command line. Supports Simple, FIRE, and AI-DLC workflows.
 
 ```bash
-brew tap fabriqaai/tap && brew install claude-code-logs
-claude-code-logs serve
+npx specsmd@latest install
 ```
 
-[![GitHub](https://img.shields.io/badge/Repository-181717?style=flat-square&logo=github)](https://github.com/fabriqaai/claude-code-logs)
-[![Go](https://img.shields.io/badge/Built_with-Go-00ADD8?style=flat-square&logo=go&logoColor=white)](https://github.com/fabriqaai/claude-code-logs)
-[![Blog Post](https://img.shields.io/badge/Read_More-FF6719?style=flat-square&logo=substack&logoColor=white)](https://www.cengizhan.com/p/announcing-claude-code-logs-a-searchable)
+[![npm](https://img.shields.io/badge/npm-specsmd-CB3837?style=flat-square&logo=npm)](https://www.npmjs.com/package/specsmd)
+[![GitHub](https://img.shields.io/badge/Repository-181717?style=flat-square&logo=github)](https://github.com/fabriqaai/specs.md)
 
 </td>
 <td width="50%" valign="top">
 
-### llm-cli
+### specsmd VS Code Extension
 
-**Unified CLI for multiple AI models**
+**specs.md sidebar for VS Code**
 
-Frustrated with starting Claude CLI for single small prompts all day? This tool provides simple aliases for your favorite LLM CLIs. One command for Claude and Gemini.
-
-- Simple aliases: `opus`, `haiku`, `sonnet`, `gemini`, `flash`
-- Centralized config via `~/.llm-cli/models.json`
-- Flexible session management
-- Streaming output support
+Manage your specs, intents, and work items directly from VS Code with a dedicated sidebar.
 
 ```bash
-brew tap fabriqaai/tap && brew install llm-cli
-llm-cli opus "explain Go interfaces"
+code --install-extension fabriqaai.specsmd
 ```
 
-[![GitHub](https://img.shields.io/badge/Repository-181717?style=flat-square&logo=github)](https://github.com/fabriqaai/llm-cli)
-[![Go](https://img.shields.io/badge/Built_with-Go-00ADD8?style=flat-square&logo=go&logoColor=white)](https://github.com/fabriqaai/llm-cli)
-[![Blog Post](https://img.shields.io/badge/Read_More-FF6719?style=flat-square&logo=substack&logoColor=white)](https://www.cengizhan.com/p/llm-cli-simple-aliases-for-your-favorite)
+[![VS Code](https://img.shields.io/badge/VS_Code-Marketplace-007ACC?style=flat-square&logo=visualstudiocode)](https://marketplace.visualstudio.com/items?itemName=fabriqaai.specsmd)
+[![GitHub](https://img.shields.io/badge/Repository-181717?style=flat-square&logo=github)](https://github.com/fabriqaai/specsmd-vscode)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### fabriqa markdown editor
+
+**Obsidian-like editing in VS Code**
+
+Three editing modes: Live Preview, Source, and Reading. Mermaid diagrams & GFM support.
+
+```bash
+code --install-extension fabriqaai.fabriqa-markdown-editor
+```
+
+[![VS Code](https://img.shields.io/badge/VS_Code-Marketplace-007ACC?style=flat-square&logo=visualstudiocode)](https://marketplace.visualstudio.com/items?itemName=fabriqaai.fabriqa-markdown-editor)
+[![GitHub](https://img.shields.io/badge/Repository-181717?style=flat-square&logo=github)](https://github.com/fabriqaai/fabriqa.ai-markdown-editor)
+
+</td>
+<td width="50%" valign="top">
+
+### claude-code-logs
+
+**Search your Claude conversations**
+
+Transforms JSONL chat logs into a searchable web interface. Full-text search, syntax highlighting.
+
+```bash
+brew tap fabriqaai/tap && brew install claude-code-logs
+```
+
+[![GitHub](https://img.shields.io/badge/Repository-181717?style=flat-square&logo=github)](https://github.com/fabriqaai/claude-code-logs)
+[![Go](https://img.shields.io/badge/Built_with-Go-00ADD8?style=flat-square&logo=go&logoColor=white)](https://github.com/fabriqaai/claude-code-logs)
 
 </td>
 </tr>
