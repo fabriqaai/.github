@@ -18,7 +18,7 @@
 [![Discord](https://img.shields.io/badge/Discord-1DA1F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.fabriqa.ai)
 [![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/hancengiz)
 [![GitHub](https://img.shields.io/badge/Founder-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/hancengiz)
-[![Linkedin](https://img.shields.io/badge/Founder-181717?style=for-the-badge&logo=github&logoColor=white)](https://linkedin.com/in/cengizhan)
+[![Linkedin](https://img.shields.io/badge/Founder-181717?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/cengizhan)
 
 
 
